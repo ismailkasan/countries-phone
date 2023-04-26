@@ -30,7 +30,7 @@ import { CountryPhoneModule } from 'ng-countries-phone';
 ## How to use
 You can use component like below. 
 
-* Your component form
+* Your component form.
 
 ```ts
 testForm: FormGroup;
@@ -54,6 +54,7 @@ onSubmit(){
   //.. Do some busines..
 }
 ```
+* Using **app-phone** in your component form.
 ```html
 <form [formGroup]="testForm" (submit)="onSubmit()">
     <!-- you can use inside your form. But you have to bind your testForm with parentForm attribute-->
