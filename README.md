@@ -67,7 +67,7 @@ onSubmit(){
      </app-phone>
 </form>
 ```
-![alt text](https://github.com/ismailkasan/countries-phone/blob/main/projects/ng-countries-phone/assets/countries-phone.png?raw=true)
+![alt text](https://github.com/ismailkasan/countries-phone/blob/master/projects/ng-countries-phone/assets/countries-phone.png?raw=true)
 ## Attributes
 
 You can customize component with our own css classes and you can give some configration. There are some details in the below tables.
