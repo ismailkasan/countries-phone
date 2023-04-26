@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-countries-phone": {
+      "projectType": "library",
+      "root": "projects/ng-countries-phone",
+      "sourceRoot": "projects/ng-countries-phone/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-countries-phone/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-countries-phone/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-countries-phone/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng-countries-phone/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "ab191a54-d7bf-4c0c-84e6-710217f8384b"
   }
 }
