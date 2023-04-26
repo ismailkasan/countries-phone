@@ -1,6 +1,10 @@
 {
   "name": "ng-countries-phone",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ismailkasan/countries-phone.git"
+  },
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0"

@@ -1,6 +1,6 @@
 <form [formGroup]="_parentForm">
     <div class="flex-container">
-        <div class="form-group">
+        <div [ngClass]="formGroupClass!=undefined  ? formGroupClass : 'form-group'" >
             <label [for]="codeFormControlName">{{codeLabelText}}</label>
             <select #code [ngClass]="codeClass!=undefined  ? codeClass : 'form-select'" [formControlName]="codeFormControlName" (change)="onCountryChange(code.value)">
                 <option selected value="{{selectedCountry?.dial_code}}">{{'('+selectedCountry?.dial_code+') '+selectedCountry?.name}}</option>
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div [ngClass]="formGroupClass!=undefined  ? formGroupClass : 'form-group'" >
             <label [for]="phoneFormControlName">{{phoneLabelText}}</label>
             <input customMusk [ngClass]="phoneClass!=undefined  ? phoneClass : 'form-control'" type="text" [formControlName]="phoneFormControlName" />
             <div *ngIf="phoneControl?.invalid && (phoneControl?.dirty || phoneControl?.touched)" class="alert-required">

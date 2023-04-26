@@ -10,7 +10,6 @@ export class MuskDirective {
     constructor(private _el: ElementRef) { }
     @HostListener('keyup', ['$event'])
     onKeyDown(e: KeyboardEvent) {
-        console.log(e);
         var myMask = "(___) ___-____";
         var myText = this._el.nativeElement.value;
         var myNumbers = [];

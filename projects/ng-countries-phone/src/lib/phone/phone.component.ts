@@ -14,6 +14,7 @@ export interface Phone {
   styleUrls: ['./phone.component.css']
 })
 export class PhoneComponent implements OnChanges {
+  
   @Input() codeLabelText: string = 'Country Code';
   @Input() phoneLabelText: string = 'Phone Number';
   @Input() defaultSelectedCountry: string = '+93';
@@ -21,7 +22,7 @@ export class PhoneComponent implements OnChanges {
   @Input() phoneValidationMessage: string;
   @Input() codeClass: string;
   @Input() phoneClass: string;
-  @Input() countries: Phone[] = [];
+  @Input() formGroupClass: string;
   @Input() phoneControl: any;
   @Input() codeControl: any;
   @Input() phoneFormControlName: string;
@@ -30,6 +31,8 @@ export class PhoneComponent implements OnChanges {
     this._parentForm = value;
   }
   _parentForm: FormGroup;
+  
+  countries: Phone[] = [];
   selectedCountry: any;
   phoneNumberMask = '(000) 000 0000';
 
