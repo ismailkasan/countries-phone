@@ -30,7 +30,7 @@ import { CountryPhoneModule } from 'ng-countries-phone';
 ## How to use
 You can use component like below. 
 
-* Your component form.
+* Your parent form.
 
 ```ts
 testForm: FormGroup;
@@ -54,7 +54,7 @@ onSubmit(){
   //.. Do some busines..
 }
 ```
-* Using **app-phone** in your component form.
+* Using **app-phone** in parent form.
 ```html
 <form [formGroup]="testForm" (submit)="onSubmit()">
     <!-- you can use inside your form. But you have to bind your testForm with parentForm attribute-->
@@ -71,7 +71,7 @@ onSubmit(){
 ![alt text](https://github.com/ismailkasan/countries-phone/blob/master/projects/ng-countries-phone/assets/countries-phone.png?raw=true)
 ## Attributes
 
-You can customize component with our own css classes and you can give some configration. There are some details in the below tables.
+You can customize component with your own css classes and you can give some configration. There are some details in the below tables.
 
 | Attribute                  |    Description   |
 | :---                       |    :----:        |
@@ -80,11 +80,11 @@ You can customize component with our own css classes and you can give some confi
 | **formGroupClass**         | class of parent div of country selection and phone input. It has boostrap "**.form-group**" class default. But, you can set your own class.|
 | **codeControl**            | **FormControl** of **parentForm** for country selection.|
 | **phoneControl**           | **FormControl** of **parentForm** for phone input.|
-| **parentForm**             | Your form component.|
+| **parentForm**             | Parent form.|
 | **phoneLabelText**         | Phone input label. It has default "**Phone Number**" value.|
 | **codeLabelText**          | Country selection label. It has default "**Country Code**" value.|
-| **codeFormControlName**    | **FormControlName** of your component form for country selection code.|
-| **phoneFormControlName**   | **FormControlName** of your component form for phone input.|
+| **codeFormControlName**    | **FormControlName** of parent form for country selection code.|
+| **phoneFormControlName**   | **FormControlName** of parent form for phone input.|
 | **codeValidationMessage**  | Custom validation message for country selection.|
 | **defaultSelectedCountry** | Default selected country code is "**+90**" **Turkey**. You can set your own.|
 | **phoneValidationMessage** | Custom validation message for phone input.|
