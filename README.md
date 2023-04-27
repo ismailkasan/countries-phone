@@ -26,6 +26,18 @@ import { CountryPhoneModule } from 'ng-countries-phone';
    ]
   })
   ```
+  You must add this configuration into your project's angular.json following this path **angularjson.projects.your-project-name.architect.build.options**. Then,you can import package's assets into your project `assets`. Because in the package assets there is a country json file.
+  
+  ```json
+   "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ng-countries-phone/assets",
+                "output": "./assets/"
+              }
+  ```
 
 ## How to use
 You can use component like below. 
